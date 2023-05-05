@@ -1,6 +1,6 @@
-import { formValues } from 'interface/property'
+import { FormValues } from 'interfaces/property'
 
-export const validateForm = (formValues: formValues) => {
+export const validateForm = (formValues: FormValues) => {
     const errors: {message: string} = { message: ''}
     let hasError = false 
 
@@ -46,7 +46,7 @@ export const validateForm = (formValues: formValues) => {
     return { hasError, errors }
 }
 
-export const hasChanged = (initialValues: formValues, currentValues: formValues) =>{
+export const hasChanged = (initialValues: FormValues, currentValues: FormValues) =>{
     const initialValuesArray = Object.values(initialValues);
     const currentValuesArray = Object.values(currentValues);
 
